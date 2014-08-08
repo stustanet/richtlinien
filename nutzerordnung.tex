@@ -1,0 +1,183 @@
+% Nutzerordnung StuStaNet e. V.
+% Tex initially created 2010 by Maximilian Engelhardt <maximilian.engelhardt@stusta.mhn.de>
+% Adopted 2014 by Markus Hefele
+
+\documentclass[a4paper,10pt]{scrartcl}
+%\documentclass[a4paper,11pt]{scrartcl}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{eurosym}
+\usepackage[pdftex,final]{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\let\xhrf\hrulefill
+\usepackage[mdput]{mathdesign}
+\let\hrulefill\xhrf
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{pigpen}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage[pdftex]{hyperref}
+\usepackage[top=2.5cm,bottom=2.5cm,left=1.3cm,right=1.3cm]{geometry}
+
+\hypersetup{
+    pdftitle    = {Nutzerordnung StuStaNet e.V.},
+    pdfsubject  = {Nutzerordnung}
+}
+
+\newboolean{onlineform}
+\setboolean{onlineform}{false}
+
+\newboolean{frakfamily}
+\setboolean{frakfamily}{false}
+
+% uncomment to enagle frank font
+% you can also use 11pt fonts
+%\setboolean{frakfamily}{true}
+
+\newcommand{\myRadioBox}{
+	\setlength{\fboxrule}{2pt}
+	\setlength{\fboxsep}{0.5em}
+	\raisebox{0.3em}{\fbox{}}
+	\rule{0pt}{1.5em}
+}
+\newcommand{\myRadioBoxMail}{
+	\setlength{\fboxrule}{2pt}
+	\setlength{\fboxsep}{0.5em}
+	\raisebox{0.3em}{\fbox{}}
+	\rule{0pt}{1.5em}
+}
+
+\ifthenelse{\boolean{frakfamily}}{
+	\usepackage{yfonts}
+	\usepackage{sectsty}
+
+	\allsectionsfont{\frakfamily}
+}{}
+
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{fancy}
+
+\fancyhf{} % clear all header and footer fields
+\rfoot{\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}\bfseries \thepage /\pageref*{LastPage}}
+\lfoot{\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}StuStaNet e.V. - Nutzerordnung}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\rfoot{\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}\bfseries \thepage /\pageref*{LastPage}}
+\lfoot{\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}StuStaNet e.V. - Nutzerordnung}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\title{Nutzerordnung}
+\date{}
+
+\begin{document}
+\ifthenelse{\boolean{frakfamily}}{
+	\frakfamily
+	\fraklines
+}{}
+
+\maketitle
+\vspace{-60pt}
+
+\begin{figure}[t!]
+   \centering
+   \vspace{-40pt}
+   \mbox{\includegraphics[width=0.75\textwidth,keepaspectratio]{StuStaNet_Logo}\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}\Huge \sffamily \textbf{e.V.}}
+   \vspace{-40pt}
+\end{figure}
+
+
+\section*{Präambel}
+Diese Nutzerordnung regelt die Nutzung der Kommunikations- und Datenverarbeitungsinfrastruktur des StuStaNet e. V. (nachfolgend Verein genannt).
+
+\section{Geltungsbereich}
+Diese Nutzerordnung gilt für alle Mitglieder des Vereins sowie allen weiteren Personen, denen Zugang zu Vereinsdiensten eingerichtet wurde oder die Vereinsdienste nutzen (nachfolgend Nutzer genannt).
+
+\section{Nutzungsberechtigung und Zulassung zur Nutzung}
+Der Verein betreibt Dienste, die ausschließlich von Mitgliedern des Verein genutzt werden dürfen. Darüber hinaus betreibt er Dienste, die Institutionen der Studentenstadt oder einer größeren Nutzerbasis zur Verfügung gestellt werden.
+
+Die angebotenen Netzdienste stehen allen Mitgliedern gleichberechtigt zur Verfügung.
+
+Dienste für Institutionen der Studentenstadt können auf Antrag an den Vorstand zur Verfügung gestellt werden. Als Institutionen zählen alle Einrichtungen, die das Leben in der Studentenstadt fördern. Dazu zählen insbesondere Einrichtungen der Häuser sowie des Gesamtheimrats und Vereine, die in der Studentenstadt tätig sind. 
+%Die Institutionen dürfen keine kommerziellen Ziele verfolgen. 
+%Erwirtschaftete Einnahmen müssen wieder für die Bewohner der Studentenstadt verwendet werden. 
+Es besteht kein Anspruch auf die Nutzung der Dienste, der Verein kann der Institution einzelne oder alle zur Verfügung gestellten Dienste jederzeit wieder entziehen. Dem Verein muss stets ein aktueller Ansprechpartner bekannt sein, der für die Nutzung der zur Verfügung gestellten Dienste verantwortlich ist. Alle Nutzer sind auf diese Nutzerordnung zu verpflichten.
+
+\section{Rechte und Pflichten der Nutzer}
+Die den Nutzern zur Verfügung gestellten Dienste sind für Forschungs- und Bildungszwecke gedacht. Eine kommerzielle Nutzung ist verboten.
+
+Die Nutzer verpflichten sich:
+
+\begin{itemize}
+        \item alles zu unterlassen, was den ordnungsgemäßen Betrieb der Dienste des Vereins stört
+        \item alle Datenverarbeitungsanlagen, Informations- und Kommunikationssysteme sorgfältig und schonend zu behandeln
+        \item dafür Sorge zu tragen, dass keine anderen Personen Kenntnis von den Benutzerpasswörtern erlangen
+        \item fremde Kennungen und Passwörter weder zu ermitteln noch zu nutzen
+        \item keinen unberechtigten Zugriff auf Informationen anderer Nutzer zu nehmen und bekanntgewordene Informationen anderer Nutzer nicht ohne Genehmigung weiterzugeben, selbst zu nutzen oder zu verändern
+        \item die zur Verfügung gestellten Dienste nur in der dafür vorgesehen Weise zu nutzen. Insbesondere ist darauf zu achten, dass keine Dienste Dritter gestört werden und keine Ressourcen verschwendet werden. 
+\end{itemize}
+
+Der Nutzer ist für die Daten und Nutzung seines Zugangs selbst verantwortlich. Es ist ihm untersagt, Zugangsdaten an Dritte weiterzugeben.
+
+Jeder Nutzer ist selbst dafür verantwortlich, regelmäßig Sicherungskopien seiner Daten anzufertigen und diese auf Vollständigkeit, Integrität und Brauchbarkeit zu prüfen.
+
+Der Nutzer wird über wichtige Angelegenheiten per E-Mail informiert. Diese wird in sein Postfach zugestellt, das er durch die Mitgliedschaft im Verein automatisch erhält. Alternativ hat er Möglichkeit, eine eigene E-Mailadresse anzugeben, an die solche Mails stattdessen zugestellt werden. Er ist verpflichtet regelmäßig sein Postfach auf solche Nachrichten zu prüfen sowie, falls er eine eigene Mailadresse angegeben hat, dafür zu sorgen, dass Mails an diese zugestellt und gelesen werden können. 
+
+\section{Ausschluß von der Nutzung}
+Nutzer können von einzelnen Diensten oder den kompletten Diensten ausgeschlossen werden, wenn sie gegen diese Nutzerodnung verstoßen. Dazu zählen auch insbesondere Netzstörungen.
+
+Die Nutzer werden über eine Sperrung durch geeignete Maßnahmen informiert (z. B. per Mail oder Sperrseite am Proxy).
+
+In weniger schweren Fällen werden Nutzer erst abgemahnt, eine Sperrung erfolgt erst bei weiterem Verstoß gegen die Nutzerordnung.
+
+In entsprechen schweren Fällen kann ein Mitglied aus dem Verein angeschlossen werden. Art. 10(3) der Satzung findet entsprechend Anwedung. 
+
+\section{Datenschutz}
+Der Verein erhebt zur Nutzung der angebotenen Dienste nötige Daten. Die erhobenen Daten werden lediglich vereinsintern zur Realisierung der Vereinsdiente verwendet. Eine Weitergabe an Dritte außerhalb des Vereins findet nicht statt.
+
+Darüber hinaus können auf den Servern des Vereins private Nutzerdaten liegen (z. B. Mailpostfach) oder privater Datenverkehr die Server passieren (z. B. Proxy). Der Zugriff zu den entsprechenden Servern wird nur den mit dem Betrieb des Servers beauftragten Administratoren gewährt.
+
+Ebenfalls werden auf den Servern gespeicherte Nutzerdaten teilweise beim LRZ gesichert. Diese Daten werden dort nur verschlüsselt abgelegt. Der zur Verschlüsselung verwendete Schlüssel ist nur dem Verein bekannt.
+
+Zur Beseitigung von Netzstörungen werden Verbindungen der Nutzer aufgezeichnet (Zeitstempel, Quell-IP und -Port, Ziel-IP und -Port, Protokoll) und innerhalb der gesetzlich vorgeschriebenen Zeit wieder gelöscht. Inhalte der Verbindung oder aufgerufene URLs werden regelmäßig nicht gespeichert.
+
+Zur gewährleistung der Sicherheit analysiert der Verein mit einem IDS\footnote{intrusion detection system} den Internetverkehr. Im Einzellfall kann der Verein Netzwerkverkehr zur Störungsbeseitigung aufzeichnen. Dieser wird umgehend wieder gelöscht.
+
+Der Verein sammelt statistische Daten zur Überwachung der Auslastung der Dienste. Die statistischen Daten lassen keine Rückschlüsse auf einzelne Personen zu und können zur Analyse auch an Dritte weitergegeben werden.
+
+\section{Haftung des Nutzers}
+Jeder Nutzer haftet für die über seinen Zugang erfolgten Handlungen. Er haftet für alle Schäden, die dem Verein durch von ihm verursachte missbräuchliche oder rechtswidrige Verwendung der Dienste oder durch nicht beachten der Nutzerordnung entstanden sind.
+
+Der Nutzer haftet auch für Schäden, die im Rahmen der ihm zur Verfügung gestellten Zugriffs- und Nutzungsmöglichkeiten durch Drittnutzung entstanden sind, wenn er diese Drittnutzung zu vertreten hat, insbesondere im Falle einer Weitergabe seiner Benutzerkennung an Dritte.
+
+Die Haftung anderer Vereinsmitglieder beschränkt sich bei Tätigkeiten, welche sich auf die Computerhardware und das Computernetz beziehen, auf Vorsatz und grobe Fahrlässigkeit.
+
+\section{Haftung des Vereins}
+Die Haftung des Vereins ist generell auf Vorsatz und grobe Fahrlässigkeit beschränkt. Der Verein übernimmt keine Haftung für die Daten der Nutzer sowie die Verfügbarkeit und Dauerhaftigkeit der Vereinsdienste. Er übernimmt keine Garantie dafür, dass das System fehlerfrei und jederzeit ohne Unterbrechung läuft. Eventueller Datenverlust infolge technischer Störungen sowie die Kenntnisnahme vertraulicher Daten durch unberechtigte Zugriffe Dritter können nicht ausgeschlossen werden.
+
+Der Verein hat keinen Einfluss auf die Verfügbarkeit und technische Funktionalität von Hardware des Studentenwerks oder des Leibniz-Rechenzentrums.
+
+Des Weiteren übernimmt er keinerlei Verantwortung für die Fehlerfreiheit der zur Verfügung gestellten Dienste sowie für die Richtigkeit von getätigten Angaben.
+
+\section{Sonstiges}
+Der Nutzer hält die Benutzerordnung/-Richtlinien des Studentenwerk Münchens sowie des Leibniz-Rechenzentrums ein.
+
+\section{Änderungen}
+Diese Nutzerordnung kann jederzeit mit Beschluss des Administratorenrats geändert werden. Über die Änderungen wird auf dem Vereinsanzeiger (rotes Haus und \url{http://vereinsanzeiger.stusta.mhn.de}) und auf der entsprechenden Wiki-Seite (\url{https://wiki.stusta.mhn.de/Nutzerordnung}) informiert. 
+
+
+\enlargethispage{40pt}
+
+\hfill Version: \today
+
+\end{document}
