@@ -1,0 +1,182 @@
+% Nutzerordnung StuStaNet e. V.
+% Tex initially created 2010 by Maximilian Engelhardt <maximilian.engelhardt@stusta.mhn.de>
+% Adopted 2014 by Markus Hefele
+% Translated by Valentin Ameres into Englisch 2014
+
+ \documentclass[a4paper,10pt]{scrartcl}
+ %\documentclass[a4paper,11pt]{scrartcl}
+
+ \usepackage[utf8x]{inputenc}
+ \usepackage[T1]{fontenc}
+ \usepackage[ngerman]{babel}
+ \usepackage{eurosym}
+ \usepackage[pdftex,final]{graphicx}
+ \usepackage{xcolor}
+ \usepackage{array}
+ \let\xhrf\hrulefill
+ \usepackage[mdput]{mathdesign}
+ \let\hrulefill\xhrf
+ \usepackage{fancyhdr}
+ \usepackage{lastpage}
+ \usepackage{pigpen}
+ \usepackage{ifthen}
+ \usepackage{calc}
+ \usepackage{multicol}
+ \usepackage[pdftex]{hyperref}
+ \usepackage[top=2.5cm,bottom=2.5cm,left=1.3cm,right=1.3cm]{geometry}
+
+ \hypersetup{
+     pdftitle    = {Nutzerordnung StuStaNet e. V. Englisch},
+     pdfsubject  = {Nutzerordnung Englisch}
+ }
+
+ \newboolean{onlineform}
+ \setboolean{onlineform}{false}
+
+ \newboolean{frakfamily}
+ \setboolean{frakfamily}{false}
+
+ % uncomment to enagle frank font
+ % you can also use 11pt fonts
+ %\setboolean{frakfamily}{true}
+
+ \newcommand{\myRadioBox}{
+         \setlength{\fboxrule}{2pt}
+         \setlength{\fboxsep}{0.5em}
+         \raisebox{0.3em}{\fbox{}}
+         \rule{0pt}{1.5em}
+ }
+ \newcommand{\myRadioBoxMail}{
+         \setlength{\fboxrule}{2pt}
+         \setlength{\fboxsep}{0.5em}
+         \raisebox{0.3em}{\fbox{}}
+         \rule{0pt}{1.5em}
+ }
+
+ \ifthenelse{\boolean{frakfamily}}{
+         \usepackage{yfonts}
+         \usepackage{sectsty}
+
+         \allsectionsfont{\frakfamily}
+ }{}
+
+
+ \setlength{\parindent}{0pt}
+
+ \pagestyle{fancy}
+
+ \fancyhf{} % clear all header and footer fields
+ \rfoot{\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}\bfseries \thepage /\pageref*{LastPage}}
+ \lfoot{\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}StuStaNet e. V. - Nutzerordnung English}
+ \renewcommand{\headrulewidth}{0pt}
+ \renewcommand{\footrulewidth}{0pt}
+
+ \fancypagestyle{plain}{
+ \fancyhf{}
+ \rfoot{\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}\bfseries \thepage /\pageref*{LastPage}}
+ \lfoot{\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}StuStaNet e. V. - Nutzerordnung English}
+ \renewcommand{\headrulewidth}{0pt}
+ \renewcommand{\footrulewidth}{0pt}}
+
+ \title{Set of User Rules}
+ \date{}
+
+ \begin{document}
+ \ifthenelse{\boolean{frakfamily}}{
+         \frakfamily
+         \fraklines
+ }{}
+
+ \maketitle
+ \vspace{-60pt}
+
+ \begin{figure}[t!]
+    \centering
+    \vspace{-40pt}
+    \mbox{\includegraphics[width=0.75\textwidth,keepaspectratio]{StuStaNet_Logo}\ifthenelse{\boolean{frakfamily}}{\frakfamily}{}\Huge \sffamily \textbf{e. V.}}
+   \vspace{-40pt}
+ \end{figure}
+
+ \section*{\fbox{\parbox{\linewidth}{\textbf{This is just a help for understanding the german Nutzerordnung and may not be a fully accurate translation.
+ In case of doubt the german Nutzerordnung is binding}}}}
+
+ \section*{Preamble}
+ This set of user rules regulates the use of the registered association StustaNet's (called association from now on)  communication- and data handling-infrastructure.
+
+ \section{Purview}
+ This set of user rules applies to all members of this association and all other persons having been given access to the association's services or using these services (called users from now on).
+
+ \section{Entitlement to access and approval for usage}
+ The association runs services only members are allowed to use. It furthermore runs services accessible to institutions of the Studentenstadt or a bigger user base.
+
+ The provided network services are equally accessible to all members. 
+ Services for institutions of the Studentenstadt can be aquired through a request to the management board. Institutions are all facilities fostering life in the Studentenstadt. These especially include the houses' facilities, Gesamtheimrat (entire dorm council) and associations operating inside of the Studentenstadt.
+
+ %The institutions mustn't pursue commercial aims.
+ %Generated revenues must be used for all residents of the Studentenstadt.
+ There is no entitlement towards usage of said services. The association has the power to withdraw single or all to institutions provided services at any time. The institutions have to provide a contact person who is responsible for all provided services. All users have to comply to the this set of rules.
+
+ \section{User rights and duties}
+  The services provided to users are for scientific and educational use only. Commercial use of said services is prohibited.
+
+ The users oblige to:
+
+ \begin{itemize}
+         \item refraining from actions disturbing the association's orderly services
+         \item treating all data management, information and communication systems with care and diligence
+         \item keeping passwords and user data safe from third parties
+         \item refraining from aquiring and using someone else's passwords
+         \item refraining from unauthorized access to other users' information and distributing, using or altering publicated user information without their knowledge
+         \item using the provided services in the intended way, paying special attention to avoiding disturbance of other peoples' services and wasting resources.
+ \end{itemize}
+
+ The user is responsible for his own connection's data and usage. The user must not share his login credentials with anyone.
+
+ It is every user's responsibility to regularly backup his data and care for its completeness, integritiy and usability.
+
+ Important matters will be communicated via e-mail. These e-mails will be delivered to his e-mail account which is automatically created with becoming a member of the association. The user is also able to enter another e-mail adress which e-mails will be alternatively delivered to. The user is obliged to regularly checking his e-mail account for e-mails and making sure they can be read and received. 
+
+ \section{Exclusion from usage}
+ Users can be excluded from single or all services when violating user rules including disrupting network services.
+
+ Regarding exclusion or blocking users will be informed via e.g. e-mail or proxy blocking site.
+
+ In less severe cases the user will receive a warning first. Blocking from services follows after a second violation of the user rules.
+
+ In severe cases a member can be excluded from the association. As seen in Art. 10(3) .
+
+ \section{Privacy}
+ The association collects all necessary user data for usage of all provided services. These data are only used for providing the association's services. The data is not shared or distributed outside the association.
+
+ Furthermore there can be private data located on the association's servers (e.g. e-mail server) or pass through the servers ( e.g. Proxy). Only the to each server assigned administrator is granted access.
+User data are also partially saved on LRZ servers. The data is encrypted and only the association is in possesion of the required encryption key. In order to solve network errors users' connections are recorded (time stamp, source-IP -Port, target-IP and port, protocols) and deleted within the legally required timespawn. Connections' content or URLs are not being recorded.
+
+ Ensuring security internet traffic is being analysed with an IDS\footnote{instrusion detection system}. In single cases network traffic can be recorded in order to eradicate errors. This recordings are being deleted immediately.
+
+ The association collects statistic data in order to monitor all services' workload. These statistic data are not personalized or attributable to single persons and can be given to third parties for analysing purposes.
+
+ \section{User accountability}
+ Every user is liable for actions carried out through his connection. He is liable for all through abusive or illicit service usage inflicted damages to the association.
+
+ The user is also liable for damages inflicted by third parties using his connection, if he has shared his connection data with third paties.
+
+ Liability for other members of the association confines to malice and wanton neglience regarding the association's network and hardware.
+
+ \section{Association's liability}
+ The association's liablity is generally confined to malice and wanton neglience. The association does not assume liability for users' data and their availability and the association's services' permanence. There is no guarantee for systems running non stop and without errors. Loss of data and third party access to sensible data due to technical probelms can not be excluded.
+
+ The association has no influence on Studentenwerk's or Leibniz-Rechenzentrum's hardware's availability and technical functionality. 
+
+ The association also does not take any responsibility for services being error free and general  information validity.
+
+ \section{Other}
+ The user complies with the user rules/policies of the Studentenwerk Munich and Leibniz Rechenzentrum.
+
+ \section{Alterations}
+ These user rules can be changed at any time with a resolution made by the boards of administrators. Alterations will be published on the associations journal (red house and \url{http://vereinsanzeiger.stusta.mhn.de}) and on the specific Wiki-page (\url{https://wiki.stusta.mhn.de/Nutzerordnung}).
+
+ %\vspace{2cm}
+ \hfill Adopted by the board of administrators on 7.8.2014
+
+ \end{document}
+
